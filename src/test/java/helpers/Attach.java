@@ -13,7 +13,7 @@ import java.util.Objects;
 import static com.codeborne.selenide.Selenide.sessionId;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
-import static web.BaseWebTest.BROWSER_NAME;
+import static tests.web.BaseWebTest.BROWSER_NAME;
 
 public class Attach {
     @Attachment(value = "{attachName}", type = "image/png")

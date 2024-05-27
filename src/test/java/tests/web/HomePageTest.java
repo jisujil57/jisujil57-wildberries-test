@@ -1,4 +1,4 @@
-package web;
+package tests.web;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
