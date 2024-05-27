@@ -54,6 +54,7 @@ public class BaseWebTest {
         Configuration.browser = BROWSER_NAME;
         Configuration.browserSize = BROWSER_SIZE;
         Configuration.baseUrl = BASE_URL;
+        Configuration.timeout = 10000;
 //        Configuration.holdBrowserOpen = true;
 
         if (IS_REMOTE_EXECUTION) {

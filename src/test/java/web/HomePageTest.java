@@ -1,5 +1,6 @@
 package web;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -16,8 +17,8 @@ import pages.web.components.SearchProductComponent;
 import java.io.File;
 import java.util.stream.Stream;
 
-
 @Tag("web_test")
+@Epic("Главная страница")
 @DisplayName("Главная страница")
 public class HomePageTest extends BaseWebTest {
     HomePage homePage = new HomePage();
@@ -41,8 +42,7 @@ public class HomePageTest extends BaseWebTest {
     @DisplayName("Успешное отображение подсказок при поиске товаров")
     @MethodSource("searchQueryAndExpectedStrings")
     void successfulSearchSuggestionsTest(String searchQuery, String[] expectedStrings) {
-        homePage.openHomePage()
-                .checkBannerVisible();
+        homePage.openHomePage();
         searchProductComponent.setSearchQuery(searchQuery)
                 .checkSearchSuggestions(expectedStrings);
     }
@@ -56,7 +56,7 @@ public class HomePageTest extends BaseWebTest {
     }
 
     @Test
-    @Feature("Рекламный баннер")
+    @Feature("Реклама")
     @Story("Отображение рекламного баннера")
     @DisplayName("Отображение рекламного баннера")
     void advertisementBannerDisplayTest() {
@@ -65,7 +65,7 @@ public class HomePageTest extends BaseWebTest {
     }
 
     @Test
-    @Feature("Рекомендуемые товары")
+    @Feature("Реклама")
     @Story("Отображение рекомендуемых товаров")
     @DisplayName("Отображение рекомендуемых товаров")
     void recommendedProductsDisplayTest() {
